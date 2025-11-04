@@ -1,54 +1,54 @@
-import { Button } from "@/components/ui/button";
-import { Check, Sparkles } from "lucide-react";
+import { Button } from '@/components/ui/button'
+import { Check, Sparkles } from 'lucide-react'
 
 const plans = [
   {
-    name: "Starter",
-    price: "₹2,999",
-    period: "/ event",
-    description: "Perfect for small events and conferences",
+    name: 'Starter',
+    price: '₹2,999',
+    period: '/ event',
+    description: 'Perfect for small events and conferences',
     features: [
-      "Up to 200 attendees",
-      "Basic QR system",
-      "Dashboard access",
-      "Email support",
-      "Event analytics",
+      'Up to 200 attendees',
+      'Basic QR system',
+      'Dashboard access',
+      'Email support',
+      'Event analytics',
     ],
     popular: false,
   },
   {
-    name: "Professional",
-    price: "₹9,999",
-    period: "/ event",
-    description: "Ideal for medium to large events",
+    name: 'Professional',
+    price: '₹9,999',
+    period: '/ event',
+    description: 'Ideal for medium to large events',
     features: [
-      "Up to 2,000 attendees",
-      "Advanced analytics",
-      "VIP/exhibitor tools",
-      "Custom branding",
-      "Priority support",
-      "On-site assistance",
-      "Email & SMS notifications",
+      'Up to 2,000 attendees',
+      'Advanced analytics',
+      'VIP/exhibitor tools',
+      'Custom branding',
+      'Priority support',
+      'On-site assistance',
+      'Email & SMS notifications',
     ],
     popular: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    period: "Pricing",
-    description: "For unlimited scale and premium needs",
+    name: 'Enterprise',
+    price: 'Custom',
+    period: 'Pricing',
+    description: 'For unlimited scale and premium needs',
     features: [
-      "Unlimited attendees",
-      "White-label platform",
-      "Dedicated event-day team",
-      "Custom integrations",
-      "24/7 premium support",
-      "Advanced security",
-      "Multi-event dashboard",
+      'Unlimited attendees',
+      'White-label platform',
+      'Dedicated event-day team',
+      'Custom integrations',
+      '24/7 premium support',
+      'Advanced security',
+      'Multi-event dashboard',
     ],
     popular: false,
   },
-];
+]
 
 const Pricing = () => {
   return (
@@ -73,8 +73,8 @@ const Pricing = () => {
                 key={index}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 animate-fade-in-up ${
                   plan.popular
-                    ? "border-primary bg-card shadow-2xl scale-105"
-                    : "border-border bg-card shadow-sm hover:shadow-lg hover:border-primary/50"
+                    ? 'border-primary bg-card shadow-2xl scale-105'
+                    : 'border-border bg-card shadow-sm hover:shadow-lg hover:border-primary/50'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -116,11 +116,11 @@ const Pricing = () => {
                   {/* CTA Buttons */}
                   <div className="pt-4 space-y-3">
                     <Button
-                      variant={plan.popular ? "hero" : "outline"}
+                      variant={plan.popular ? 'hero' : 'outline'}
                       className="w-full"
                       size="lg"
                     >
-                      {plan.price === "Custom" ? "Request Quote" : "Book a Demo"}
+                      {plan.price === 'Custom' ? 'Request Quote' : 'Book a Demo'}
                     </Button>
                   </div>
                 </div>
@@ -130,9 +130,7 @@ const Pricing = () => {
 
           {/* Bottom CTA */}
           <div className="text-center pt-8">
-            <p className="text-muted-foreground mb-4">
-              Need help choosing the right plan?
-            </p>
+            <p className="text-muted-foreground mb-4">Need help choosing the right plan?</p>
             <Button variant="cta" size="lg">
               Talk to Sales
             </Button>
@@ -140,7 +138,7 @@ const Pricing = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Pricing;
+export default Pricing

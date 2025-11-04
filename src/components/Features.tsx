@@ -1,56 +1,48 @@
-import { 
-  QrCode, 
-  LayoutDashboard, 
-  Users, 
-  Calendar, 
-  Store, 
-  Crown, 
-  Mail, 
-  Cloud 
-} from "lucide-react";
+import { QrCode, LayoutDashboard, Users, Calendar, Store, Crown, Mail, Cloud } from 'lucide-react'
 
 const features = [
   {
     icon: QrCode,
-    title: "QR E-Pass Generation",
-    description: "Instant digital passes with QR codes for seamless entry and tracking.",
+    title: 'QR E-Pass Generation',
+    description: 'Instant digital passes with QR codes for seamless entry and tracking.',
   },
   {
     icon: LayoutDashboard,
-    title: "Real-Time Dashboard",
-    description: "Monitor registrations, check-ins, and analytics live from one powerful interface.",
+    title: 'Real-Time Dashboard',
+    description:
+      'Monitor registrations, check-ins, and analytics live from one powerful interface.',
   },
   {
     icon: Users,
-    title: "On-Site Check-In Support",
-    description: "Dedicated event-day team ensures smooth entry management and support.",
+    title: 'On-Site Check-In Support',
+    description: 'Dedicated event-day team ensures smooth entry management and support.',
   },
   {
     icon: Calendar,
-    title: "Multi-Event Management",
-    description: "Manage multiple events simultaneously with unified control and reporting.",
+    title: 'Multi-Event Management',
+    description: 'Manage multiple events simultaneously with unified control and reporting.',
   },
   {
     icon: Store,
-    title: "Exhibitor Onboarding",
-    description: "Streamlined booth assignment and exhibitor registration process.",
+    title: 'Exhibitor Onboarding',
+    description: 'Streamlined booth assignment and exhibitor registration process.',
   },
   {
     icon: Crown,
-    title: "VIP Management",
-    description: "Special handling for VIP attendees with priority access and tracking.",
+    title: 'VIP Management',
+    description: 'Special handling for VIP attendees with priority access and tracking.',
   },
   {
     icon: Mail,
-    title: "Email Notifications",
-    description: "Automated confirmations, reminders, and updates for all participants.",
+    title: 'Email Notifications',
+    description: 'Automated confirmations, reminders, and updates for all participants.',
   },
   {
     icon: Cloud,
-    title: "Cloud Analytics",
-    description: "Secure cloud-hosted data with comprehensive insights and reporting.",
+    title: 'Cloud Analytics',
+    description: 'Secure cloud-hosted data with comprehensive insights and reporting.',
   },
-];
+]
 
 const Features = () => {
   return (
@@ -81,9 +73,7 @@ const Features = () => {
                     <feature.icon className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -91,7 +81,7 @@ const Features = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

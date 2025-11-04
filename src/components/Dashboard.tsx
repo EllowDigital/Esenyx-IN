@@ -1,5 +1,5 @@
-import dashboardImage from "@/assets/dashboard-preview.jpg";
-import { Activity, TrendingUp, Users, CheckCircle } from "lucide-react";
+import dashboardImage from '@/assets/dashboard-preview.jpg'
+import { Activity, TrendingUp, Users, CheckCircle } from 'lucide-react'
 
 const Dashboard = () => {
   return (
@@ -80,7 +80,7 @@ const Dashboard = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Dashboard;
+export default Dashboard

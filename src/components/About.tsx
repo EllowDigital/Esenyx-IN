@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { Quote } from 'lucide-react'
 
 const About = () => {
   return (
@@ -16,14 +16,17 @@ const About = () => {
           {/* Content */}
           <div className="space-y-8">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-              Esenyx is an innovative product by <span className="font-semibold text-foreground">EllowDigital</span>, 
-              designed to revolutionize how events are managed. Our platform streamlines multi-event registration, 
-              exhibitor onboarding, and live attendance tracking—all from one powerful dashboard.
+              Esenyx is an innovative product by{' '}
+              <span className="font-semibold text-foreground">EllowDigital</span>, designed to
+              revolutionize how events are managed. Our platform streamlines multi-event
+              registration, exhibitor onboarding, and live attendance tracking—all from one powerful
+              dashboard.
             </p>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center max-w-4xl mx-auto">
-              From small gatherings to massive expos, Esenyx handles every detail with precision—enabling 
-              real-time check-ins, instant e-pass generation, and comprehensive analytics that keep you in control.
+              From small gatherings to massive expos, Esenyx handles every detail with
+              precision—enabling real-time check-ins, instant e-pass generation, and comprehensive
+              analytics that keep you in control.
             </p>
 
             {/* Quote Card */}
@@ -33,16 +36,14 @@ const About = () => {
                 <p className="text-xl md:text-2xl font-medium text-secondary-foreground italic leading-relaxed">
                   "Great events don't just happen — they're managed with precision and passion."
                 </p>
-                <footer className="text-primary font-semibold text-lg">
-                  — EllowDigital Team
-                </footer>
+                <footer className="text-primary font-semibold text-lg">— EllowDigital Team</footer>
               </blockquote>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

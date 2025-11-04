@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, QrCode, Users } from "lucide-react";
-import heroImage from "@/assets/hero-event.jpg";
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Calendar, QrCode, Users } from 'lucide-react'
+import heroImage from '@/assets/hero-event.jpg'
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-10"
         style={{
           backgroundImage: `url(${heroImage})`,
@@ -14,7 +14,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       />
-      
+
       {/* Content */}
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
@@ -75,7 +75,7 @@ const Hero = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

@@ -1,38 +1,36 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Label } from '@/components/ui/label'
+import { Mail, Phone, MapPin } from 'lucide-react'
+import { useState } from 'react'
+import { toast } from 'sonner'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    eventType: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    organization: '',
+    eventType: '',
+    message: '',
+  })
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Form submission logic would go here
-    toast.success("Thank you! We'll get back to you soon.");
+    toast.success("Thank you! We'll get back to you soon.")
     setFormData({
-      name: "",
-      email: "",
-      organization: "",
-      eventType: "",
-      message: "",
-    });
-  };
+      name: '',
+      email: '',
+      organization: '',
+      eventType: '',
+      message: '',
+    })
+  }
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   return (
     <section className="py-24 px-4 bg-muted/30" id="contact">
@@ -67,10 +65,10 @@ const Contact = () => {
                   <div>
                     <div className="font-semibold mb-1">Email Us</div>
                     <a
-                      href="mailto:info@ellowdigital.com"
+                      href="mailto:ellowdigitalindia@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      info@ellowdigital.com
+                      ellowdigitalindia@gmail.com
                     </a>
                   </div>
                 </div>
@@ -82,10 +80,10 @@ const Contact = () => {
                   <div>
                     <div className="font-semibold mb-1">Call Us</div>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+918960446756"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +91 98765 43210
+                      +91 8960446756
                     </a>
                   </div>
                 </div>
@@ -96,9 +94,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="font-semibold mb-1">Visit Us</div>
-                    <p className="text-muted-foreground">
-                      Lucknow, Uttar Pradesh, India
-                    </p>
+                    <p className="text-muted-foreground">Lucknow, Uttar Pradesh, India</p>
                   </div>
                 </div>
               </div>
@@ -106,7 +102,10 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <form onSubmit={handleSubmit} className="space-y-6 p-8 bg-card rounded-2xl shadow-lg border border-border">
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-6 p-8 bg-card rounded-2xl shadow-lg border border-border"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name *</Label>
@@ -180,7 +179,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

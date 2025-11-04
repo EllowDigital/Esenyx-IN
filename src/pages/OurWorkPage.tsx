@@ -1,58 +1,61 @@
-import { motion, Variants } from "framer-motion";
-import { Award, Users, Building, TrendingUp, Calendar, MapPin, Star, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import { motion, Variants } from 'framer-motion'
+import { Award, Users, Building, TrendingUp, Calendar, MapPin, Star, ArrowLeft } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
+import Footer from '@/components/Footer'
+import { useEffect } from 'react'
 
 const OurWorkPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   const caseStudies = [
     {
-      year: "2025",
-      name: "Tent Decor Expo UP 2025",
-      date: "February 2025",
-      location: "Uttar Pradesh, India",
-      overview: "EllowDigital proudly developed a comprehensive platform — Esenyx — to streamline registration, exhibitor onboarding, and entry management for the prestigious Tent Decor Expo UP 2025. Our solution handled thousands of attendees and dozens of exhibitors with precision and ease.",
+      year: '2025',
+      name: 'Tent Decor Expo UP 2025',
+      date: 'February 2025',
+      location: 'Uttar Pradesh, India',
+      overview:
+        'EllowDigital proudly developed a comprehensive platform — Esenyx — to streamline registration, exhibitor onboarding, and entry management for the prestigious Tent Decor Expo UP 2025. Our solution handled thousands of attendees and dozens of exhibitors with precision and ease.',
       results: [
-        { icon: Users, label: "Registrations", value: "2,500+" },
-        { icon: Building, label: "Exhibitors Onboarded", value: "50+" },
-        { icon: Award, label: "Downtime", value: "Zero" },
-        { icon: TrendingUp, label: "Faster Check-in", value: "80%" },
+        { icon: Users, label: 'Registrations', value: '2,500+' },
+        { icon: Building, label: 'Exhibitors Onboarded', value: '50+' },
+        { icon: Award, label: 'Downtime', value: 'Zero' },
+        { icon: TrendingUp, label: 'Faster Check-in', value: '80%' },
       ],
       highlights: [
-        "Seamless QR-based entry system eliminated long queues and manual verification",
-        "Real-time dashboard monitoring provided instant insights to organizers",
-        "On-site team support ensured smooth operations throughout the event",
+        'Seamless QR-based entry system eliminated long queues and manual verification',
+        'Real-time dashboard monitoring provided instant insights to organizers',
+        'On-site team support ensured smooth operations throughout the event',
       ],
       testimonial: {
-        quote: "Esenyx made our event registration and entry effortless — and the EllowDigital team's on-site support was outstanding.",
-        author: "Tent Decor Expo Organizing Committee, UP",
+        quote:
+          "Esenyx made our event registration and entry effortless — and the EllowDigital team's on-site support was outstanding.",
+        author: 'Tent Decor Expo Organizing Committee, UP',
       },
-      thanks: "Special thanks to the Tent, Caterers & Decorators Welfare Association of UP",
+      thanks: 'Special thanks to the Tent, Caterers & Decorators Welfare Association of UP',
     },
     {
-      year: "2024",
-      name: "TechSummit India",
-      date: "November 2024",
-      location: "Bangalore, India",
-      overview: "Digital registration platform with live check-in tracking and exhibitor insights for one of India's premier technology conferences.",
+      year: '2024',
+      name: 'TechSummit India',
+      date: 'November 2024',
+      location: 'Bangalore, India',
+      overview:
+        "Digital registration platform with live check-in tracking and exhibitor insights for one of India's premier technology conferences.",
       results: [
-        { icon: Users, label: "Registrations", value: "1,800+" },
-        { icon: Building, label: "Exhibitors", value: "35+" },
-        { icon: Award, label: "Check-in Speed", value: "75% Faster" },
-        { icon: TrendingUp, label: "User Satisfaction", value: "95%" },
+        { icon: Users, label: 'Registrations', value: '1,800+' },
+        { icon: Building, label: 'Exhibitors', value: '35+' },
+        { icon: Award, label: 'Check-in Speed', value: '75% Faster' },
+        { icon: TrendingUp, label: 'User Satisfaction', value: '95%' },
       ],
       highlights: [
-        "Multi-tier registration system for attendees, speakers, and VIPs",
-        "Integrated badge printing with QR codes",
-        "Real-time analytics dashboard for organizers",
+        'Multi-tier registration system for attendees, speakers, and VIPs',
+        'Integrated badge printing with QR codes',
+        'Real-time analytics dashboard for organizers',
       ],
     },
-  ];
+  ]
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -62,7 +65,7 @@ const OurWorkPage = () => {
         staggerChildren: 0.3,
       },
     },
-  };
+  }
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -73,7 +76,7 @@ const OurWorkPage = () => {
         duration: 0.6,
       },
     },
-  };
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,7 +85,10 @@ const OurWorkPage = () => {
         {/* Animated background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-20 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-10 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+          <div
+            className="absolute bottom-10 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1.5s' }}
+          />
         </div>
 
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -92,13 +98,16 @@ const OurWorkPage = () => {
             transition={{ duration: 0.4 }}
           >
             <Link to="/">
-              <Button variant="ghost" className="mb-8 text-foreground hover:text-primary hover:bg-primary/10 transition-all">
+              <Button
+                variant="ghost"
+                className="mb-8 text-foreground hover:text-primary hover:bg-primary/10 transition-all"
+              >
                 <ArrowLeft className="mr-2 w-4 h-4" />
                 Back to Home
               </Button>
             </Link>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,8 +135,8 @@ const OurWorkPage = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Explore how Esenyx is transforming event management across India — 
-              from expos to corporate summits.
+              Explore how Esenyx is transforming event management across India — from expos to
+              corporate summits.
             </motion.p>
           </motion.div>
         </div>
@@ -155,7 +164,7 @@ const OurWorkPage = () => {
                   whileInView={{ scaleY: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5 }}
-                  style={{ transformOrigin: "top" }}
+                  style={{ transformOrigin: 'top' }}
                 />
               )}
 
@@ -164,7 +173,7 @@ const OurWorkPage = () => {
                 <motion.div
                   className="flex-shrink-0"
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl hover:shadow-primary/30 transition-shadow">
                     <span className="text-2xl font-bold text-white">{study.year.slice(2)}</span>
@@ -175,7 +184,7 @@ const OurWorkPage = () => {
                 <motion.div
                   className="bg-card rounded-2xl shadow-lg border border-border overflow-hidden hover:shadow-2xl hover:border-primary/20 transition-all duration-300"
                   whileHover={{ y: -5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
                 >
                   {/* Header */}
                   <motion.div
@@ -224,9 +233,7 @@ const OurWorkPage = () => {
                     {/* Overview */}
                     <div>
                       <h3 className="text-xl font-bold mb-3">Overview</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {study.overview}
-                      </p>
+                      <p className="text-muted-foreground leading-relaxed">{study.overview}</p>
                     </div>
 
                     {/* Results Grid */}
@@ -256,7 +263,9 @@ const OurWorkPage = () => {
                               <result.icon className="w-5 h-5 text-primary" />
                             </motion.div>
                             <div className="text-2xl font-bold">{result.value}</div>
-                            <div className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{result.label}</div>
+                            <div className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+                              {result.label}
+                            </div>
                           </motion.div>
                         ))}
                       </div>
@@ -284,11 +293,13 @@ const OurWorkPage = () => {
                             >
                               <motion.div
                                 whileHover={{ scale: 1.2, rotate: 20 }}
-                                transition={{ type: "spring", stiffness: 300 }}
+                                transition={{ type: 'spring', stiffness: 300 }}
                               >
                                 <Award className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                               </motion.div>
-                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">{highlight}</span>
+                              <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                                {highlight}
+                              </span>
                             </motion.li>
                           ))}
                         </ul>
@@ -344,7 +355,7 @@ const OurWorkPage = () => {
         >
           {/* Animated background glow */}
           <div className="absolute inset-0 bg-gradient-primary opacity-5 blur-3xl" />
-          
+
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-secondary-foreground relative z-10"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -372,7 +383,11 @@ const OurWorkPage = () => {
           >
             <Link to="/#contact">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto shadow-lg hover:shadow-primary/30">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="text-lg px-8 py-6 h-auto shadow-lg hover:shadow-primary/30"
+                >
                   Book a Demo
                 </Button>
               </motion.div>
@@ -390,7 +405,7 @@ const OurWorkPage = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default OurWorkPage;
+export default OurWorkPage

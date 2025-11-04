@@ -1,15 +1,15 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Users, Building, TrendingUp, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Button } from '@/components/ui/button'
+import { ArrowRight, Award, Users, Building, TrendingUp, Zap } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const OurWork = () => {
   const stats = [
-    { icon: Users, value: "4,300+", label: "Total Registrations" },
-    { icon: Building, value: "85+", label: "Exhibitors Managed" },
-    { icon: TrendingUp, value: "80%", label: "Faster Check-ins" },
-    { icon: Zap, value: "100%", label: "Success Rate" },
-  ];
+    { icon: Users, value: '4,300+', label: 'Total Registrations' },
+    { icon: Building, value: '85+', label: 'Exhibitors Managed' },
+    { icon: TrendingUp, value: '80%', label: 'Faster Check-ins' },
+    { icon: Zap, value: '100%', label: 'Success Rate' },
+  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,7 +19,7 @@ const OurWork = () => {
         staggerChildren: 0.15,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -30,14 +30,17 @@ const OurWork = () => {
         duration: 0.5,
       },
     },
-  };
+  }
 
   return (
     <section className="py-24 px-4 bg-gradient-dark relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      
+      <div
+        className="absolute bottom-20 right-10 w-80 h-80 bg-primary/3 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: '1s' }}
+      />
+
       <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           className="text-center space-y-8"
@@ -53,27 +56,27 @@ const OurWork = () => {
               <span className="font-semibold text-primary">Success Stories</span>
             </div>
           </motion.div>
-          
+
           <motion.h2
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold text-secondary-foreground"
           >
             Our Work
           </motion.h2>
-          
+
           <motion.p
             variants={itemVariants}
             className="text-xl text-secondary-foreground/80 max-w-3xl mx-auto"
           >
             Explore how Esenyx is powering events across India.
           </motion.p>
-          
+
           <motion.p
             variants={itemVariants}
             className="text-lg text-secondary-foreground/70 max-w-2xl mx-auto"
           >
-            See how we've helped event organizers deliver exceptional experiences — 
-            from trade expos to corporate summits.
+            See how we've helped event organizers deliver exceptional experiences — from trade expos
+            to corporate summits.
           </motion.p>
 
           {/* Stats Grid */}
@@ -94,24 +97,20 @@ const OurWork = () => {
                 <div className="text-2xl md:text-3xl font-bold text-secondary-foreground">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-secondary-foreground/70">
-                  {stat.label}
-                </div>
+                <div className="text-xs md:text-sm text-secondary-foreground/70">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
-          
+
           {/* CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="pt-6"
-          >
+          <motion.div variants={itemVariants} className="pt-6">
             <Link to="/our-work">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-primary/20">
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="text-lg px-8 py-6 h-auto group shadow-lg hover:shadow-primary/20"
+                >
                   View Work Timeline
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -121,7 +120,7 @@ const OurWork = () => {
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default OurWork;
+export default OurWork

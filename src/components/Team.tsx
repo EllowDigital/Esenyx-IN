@@ -1,5 +1,5 @@
-import teamImage from "@/assets/team-photo.jpg";
-import { Headphones, Shield, Clock } from "lucide-react";
+import teamImage from '@/assets/team-photo.jpg'
+import { Headphones, Shield, Clock } from 'lucide-react'
 
 const Team = () => {
   return (
@@ -34,13 +34,11 @@ const Team = () => {
             {/* Features */}
             <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold">
-                  Professional On-Ground Support
-                </h3>
+                <h3 className="text-2xl md:text-3xl font-bold">Professional On-Ground Support</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  EllowDigital provides trained event professionals who work alongside you 
-                  on event day, handling check-ins, troubleshooting, and ensuring seamless 
-                  attendee experiences.
+                  EllowDigital provides trained event professionals who work alongside you on event
+                  day, handling check-ins, troubleshooting, and ensuring seamless attendee
+                  experiences.
                 </p>
               </div>
 
@@ -92,7 +90,7 @@ const Team = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

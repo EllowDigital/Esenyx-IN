@@ -40,3 +40,35 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Heart blink animation for footer */
+.heart {
+  color: #e11d48; /* red */
+  display: inline-block;
+  line-height: 0;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heart.blink {
+    animation: heart-beat 1s infinite;
+  }
+}
