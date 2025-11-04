@@ -143,8 +143,8 @@ const Footer = () => {
               Made with{' '}
               <span className="heart blink" aria-hidden>
                 ❤
-              </span>
-              <span className="sr-only"> love</span> EllowDigital
+              </span>{' '}
+              EllowDigital
             </p>
           </div>
         </div>
