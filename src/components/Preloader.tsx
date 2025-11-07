@@ -3,15 +3,33 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   useEffect(() => {
-    // Simulate minimum loading time for smooth experience
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+    // Preload the logo image
+    const logoImage = new Image()
+    logoImage.src = '/assets/images/logo.png'
+    logoImage.onload = () => setImageLoaded(true)
 
-    return () => clearTimeout(timer)
-  }, [])
+    // Wait for complete page load
+    const handleLoad = () => {
+      // Ensure minimum display time and image is loaded
+      if (imageLoaded) {
+        setTimeout(() => setLoading(false), 500)
+      }
+    }
+
+    // Check if page is already loaded
+    if (document.readyState === 'complete' && imageLoaded) {
+      setTimeout(() => setLoading(false), 500)
+    } else {
+      window.addEventListener('load', handleLoad)
+    }
+
+    return () => {
+      window.removeEventListener('load', handleLoad)
+    }
+  }, [imageLoaded])
 
   return (
     <AnimatePresence mode="wait">
