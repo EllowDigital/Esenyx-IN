@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/assets/images/logo.png"
+                src={new URL('../../assets/images/logo.png', import.meta.url).href}
                 alt="Esenyx logo"
                 className="w-12 h-12 object-contain"
               />

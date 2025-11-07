@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Use Vite-aware URL so the asset is included in the build output with the
+// correct path (avoids 404s on case-sensitive hosts).
+const logo = new URL('../../assets/images/logo.png', import.meta.url).href
+
 const Preloader = () => {
   const [loading, setLoading] = useState(true)
   const [imageLoaded, setImageLoaded] = useState(false)
@@ -8,7 +12,7 @@ const Preloader = () => {
   useEffect(() => {
     // Preload the logo image
     const logoImage = new Image()
-    logoImage.src = '/assets/images/logo.png'
+    logoImage.src = logo
     logoImage.onload = () => setImageLoaded(true)
 
     // Wait for complete page load
@@ -48,11 +52,7 @@ const Preloader = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <img
-                src="/assets/images/logo.png"
-                alt="Esenyx logo"
-                className="w-32 h-32 object-contain"
-              />
+              <img src={logo} alt="Esenyx logo" className="w-32 h-32 object-contain" />
               {/* Pulsing ring */}
               <motion.div
                 className="absolute inset-0 border-4 border-primary rounded-full"

@@ -65,8 +65,9 @@ const Navigation = () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
+              {/* Use Vite URL import for logo so build includes the asset */}
               <img
-                src="/assets/images/logo.png"
+                src={new URL('../../assets/images/logo.png', import.meta.url).href}
                 alt="Esenyx"
                 className="w-10 h-10 object-contain group-hover:scale-110 transition-transform"
               />

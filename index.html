@@ -66,8 +66,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://ellowdigital.netlify.app" />
 
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/assets/images/logo.png" as="image" />
+    <!-- Preload critical assets (removed static preload of logo to avoid 404s — logo is loaded via Vite imports) -->
 
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
