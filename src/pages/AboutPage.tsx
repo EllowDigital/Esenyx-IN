@@ -14,22 +14,26 @@ const AboutPage = () => {
     {
       icon: Target,
       title: 'Innovation',
-      description: 'We constantly push boundaries to deliver cutting-edge event management solutions that stay ahead of industry trends.',
+      description:
+        'We constantly push boundaries to deliver cutting-edge event management solutions that stay ahead of industry trends.',
     },
     {
       icon: Heart,
       title: 'Customer First',
-      description: 'Your success is our priority. We provide dedicated support and tailored solutions for every event.',
+      description:
+        'Your success is our priority. We provide dedicated support and tailored solutions for every event.',
     },
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We maintain the highest standards in platform reliability, security, and user experience.',
+      description:
+        'We maintain the highest standards in platform reliability, security, and user experience.',
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We work closely with event organizers to understand needs and deliver solutions that truly work.',
+      description:
+        'We work closely with event organizers to understand needs and deliver solutions that truly work.',
     },
   ]
 
@@ -49,29 +53,35 @@ const AboutPage = () => {
     {
       year: '2023',
       title: 'Esenyx Launch',
-      description: 'Launched Esenyx platform, revolutionizing event registration and check-in processes.',
+      description:
+        'Launched Esenyx platform, revolutionizing event registration and check-in processes.',
     },
     {
       year: '2024',
       title: 'Rapid Growth',
-      description: 'Expanded to serve major trade shows, corporate summits, and conferences across India.',
+      description:
+        'Expanded to serve major trade shows, corporate summits, and conferences across India.',
     },
     {
       year: '2025',
       title: 'Industry Leader',
-      description: 'Became the preferred event management platform for large-scale exhibitions and expos.',
+      description:
+        'Became the preferred event management platform for large-scale exhibitions and expos.',
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1s' }}
+          />
         </div>
 
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -85,7 +95,8 @@ const AboutPage = () => {
               About <span className="text-primary">Esenyx</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-              Transforming event management through innovation, dedication, and cutting-edge technology
+              Transforming event management through innovation, dedication, and cutting-edge
+              technology
             </p>
           </motion.div>
         </div>
@@ -111,13 +122,20 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Esenyx was born from a simple observation: event management was too complex, too manual, and too prone to errors. We saw organizers struggling with spreadsheets, paper lists, and chaos at entry gates.
+                  Esenyx was born from a simple observation: event management was too complex, too
+                  manual, and too prone to errors. We saw organizers struggling with spreadsheets,
+                  paper lists, and chaos at entry gates.
                 </p>
                 <p>
-                  As a product of <span className="font-semibold text-foreground">EllowDigital</span>, we combined our expertise in digital solutions with deep insights from event professionals to create something truly transformative.
+                  As a product of{' '}
+                  <span className="font-semibold text-foreground">EllowDigital</span>, we combined
+                  our expertise in digital solutions with deep insights from event professionals to
+                  create something truly transformative.
                 </p>
                 <p>
-                  Today, Esenyx powers events across India—from intimate workshops to massive trade expos—helping organizers focus on creating memorable experiences while we handle the logistics.
+                  Today, Esenyx powers events across India—from intimate workshops to massive trade
+                  expos—helping organizers focus on creating memorable experiences while we handle
+                  the logistics.
                 </p>
               </div>
             </motion.div>
@@ -130,11 +148,7 @@ const AboutPage = () => {
               className="relative"
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={teamPhoto}
-                  alt="Esenyx Team"
-                  className="w-full h-full object-cover"
-                />
+                <img src={teamPhoto} alt="Esenyx Team" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-gradient-primary p-8 rounded-2xl shadow-xl">
                 <div className="text-center">
@@ -160,9 +174,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center p-6 bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                  {stat.value}
-                </div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{stat.value}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
@@ -241,8 +253,12 @@ const AboutPage = () => {
                   <span className="text-2xl font-bold text-white">{milestone.year}</span>
                 </div>
                 <div className="flex-1 p-6 bg-card/10 backdrop-blur-sm rounded-xl border border-border/20">
-                  <h3 className="text-2xl font-bold text-secondary-foreground mb-2">{milestone.title}</h3>
-                  <p className="text-secondary-foreground/80 leading-relaxed">{milestone.description}</p>
+                  <h3 className="text-2xl font-bold text-secondary-foreground mb-2">
+                    {milestone.title}
+                  </h3>
+                  <p className="text-secondary-foreground/80 leading-relaxed">
+                    {milestone.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

@@ -129,35 +129,43 @@ const PricingPage = () => {
   const pricingFAQ = [
     {
       question: 'What happens if my event exceeds the attendee limit?',
-      answer: 'If your event grows beyond your plan\'s attendee limit, we\'ll contact you to upgrade to the next tier. You\'ll only pay the difference, prorated for the remaining period.',
+      answer:
+        "If your event grows beyond your plan's attendee limit, we'll contact you to upgrade to the next tier. You'll only pay the difference, prorated for the remaining period.",
     },
     {
       question: 'Do you offer refunds?',
-      answer: 'We offer a 14-day money-back guarantee for new customers. If you\'re not satisfied with Esenyx, contact us within 14 days of purchase for a full refund.',
+      answer:
+        "We offer a 14-day money-back guarantee for new customers. If you're not satisfied with Esenyx, contact us within 14 days of purchase for a full refund.",
     },
     {
       question: 'Can I cancel my subscription anytime?',
-      answer: 'Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period, and you won\'t be charged again.',
+      answer:
+        "Yes, you can cancel your subscription at any time. Your access will continue until the end of your current billing period, and you won't be charged again.",
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards (Visa, MasterCard, American Express), UPI, net banking, and bank transfers for Enterprise plans.',
+      answer:
+        'We accept all major credit cards (Visa, MasterCard, American Express), UPI, net banking, and bank transfers for Enterprise plans.',
     },
     {
       question: 'Is on-site support included in all plans?',
-      answer: 'On-site support is included in Professional (1 day) and Enterprise (full event duration) plans. Starter plan customers can add on-site support for an additional fee.',
+      answer:
+        'On-site support is included in Professional (1 day) and Enterprise (full event duration) plans. Starter plan customers can add on-site support for an additional fee.',
     },
     {
       question: 'Can I switch plans later?',
-      answer: 'Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately for upgrades, or at the next billing cycle for downgrades.',
+      answer:
+        'Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately for upgrades, or at the next billing cycle for downgrades.',
     },
     {
       question: 'Do you offer custom Enterprise pricing?',
-      answer: 'Yes, Enterprise pricing is customized based on your specific needs, event size, and feature requirements. Contact our sales team for a personalized quote.',
+      answer:
+        'Yes, Enterprise pricing is customized based on your specific needs, event size, and feature requirements. Contact our sales team for a personalized quote.',
     },
     {
       question: 'Are there any setup fees?',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include a one-time onboarding fee depending on customization requirements.',
+      answer:
+        'No setup fees for Starter and Professional plans. Enterprise plans may include a one-time onboarding fee depending on customization requirements.',
     },
   ]
 
@@ -166,14 +174,14 @@ const PricingPage = () => {
     return `₹${(price / 100).toLocaleString('en-IN')}`
   }
 
-  const getPrice = (tier: typeof pricingTiers[0]) => {
+  const getPrice = (tier: (typeof pricingTiers)[0]) => {
     if (tier.monthlyPrice === null) return 'Custom'
-    return billingCycle === 'monthly' 
+    return billingCycle === 'monthly'
       ? formatPrice(tier.monthlyPrice)
       : formatPrice(tier.annualPrice)
   }
 
-  const getSavings = (tier: typeof pricingTiers[0]) => {
+  const getSavings = (tier: (typeof pricingTiers)[0]) => {
     if (tier.monthlyPrice === null || tier.annualPrice === null) return null
     const monthlyCost = tier.monthlyPrice * 12
     const savings = monthlyCost - tier.annualPrice
@@ -183,12 +191,15 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1s' }}
+          />
         </div>
 
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -212,7 +223,9 @@ const PricingPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center justify-center gap-4 pt-6"
             >
-              <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-foreground' : 'text-muted-foreground'}`}>
+              <span
+                className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-foreground' : 'text-muted-foreground'}`}
+              >
                 Monthly
               </span>
               <button
@@ -227,7 +240,9 @@ const PricingPage = () => {
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                 />
               </button>
-              <span className={`text-lg font-medium ${billingCycle === 'annual' ? 'text-foreground' : 'text-muted-foreground'}`}>
+              <span
+                className={`text-lg font-medium ${billingCycle === 'annual' ? 'text-foreground' : 'text-muted-foreground'}`}
+              >
                 Annual
               </span>
               {billingCycle === 'annual' && (
@@ -383,10 +398,7 @@ const PricingPage = () => {
                     <td className="p-4">
                       <div className="flex flex-wrap gap-2">
                         {row.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-muted px-2 py-1 rounded"
-                          >
+                          <span key={idx} className="text-xs bg-muted px-2 py-1 rounded">
                             {feature}
                           </span>
                         ))}
@@ -432,7 +444,10 @@ const PricingPage = () => {
               </thead>
               <tbody>
                 {pricingTiers[0].features.map((feature, featureIndex) => (
-                  <tr key={featureIndex} className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors">
+                  <tr
+                    key={featureIndex}
+                    className="border-b border-border last:border-0 hover:bg-muted/30 transition-colors"
+                  >
                     <td className="p-6 font-medium">{feature.name}</td>
                     {pricingTiers.map((tier, tierIndex) => (
                       <td key={tierIndex} className="text-center p-6">

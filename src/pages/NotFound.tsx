@@ -17,7 +17,10 @@ const NotFound = () => {
       {/* Animated background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: '1s' }}
+        />
       </div>
 
       <div className="text-center space-y-8 px-4 relative z-10">
@@ -55,11 +58,7 @@ const NotFound = () => {
             <Home className="mr-2 w-5 h-5" />
             Back to Home
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            onClick={() => navigate(-1)}
-          >
+          <Button size="lg" variant="outline" onClick={() => navigate(-1)}>
             <ArrowLeft className="mr-2 w-5 h-5" />
             Go Back
           </Button>

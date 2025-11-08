@@ -73,8 +73,8 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial, index) => (
             <motion.div key={index} variants={itemVariants}>
-        <Card className="h-full bg-white border border-border shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-card dark:border-border/20">
-          <CardContent className="p-6 space-y-4">
+              <Card className="h-full bg-white border border-border shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-card dark:border-border/20">
+                <CardContent className="p-6 space-y-4">
                   <Quote className="w-10 h-10 text-primary/20" />
 
                   <div className="flex gap-1">

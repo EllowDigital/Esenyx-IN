@@ -1,7 +1,19 @@
 import { motion } from 'framer-motion'
-import { 
-  QrCode, LayoutDashboard, Users, Calendar, Store, Crown, Mail, Cloud,
-  CheckCircle, TrendingUp, Shield, Zap, Globe, Headphones
+import {
+  QrCode,
+  LayoutDashboard,
+  Users,
+  Calendar,
+  Store,
+  Crown,
+  Mail,
+  Cloud,
+  CheckCircle,
+  TrendingUp,
+  Shield,
+  Zap,
+  Globe,
+  Headphones,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useNavigate } from 'react-router-dom'
@@ -28,7 +40,8 @@ const ServicesPage = () => {
     {
       icon: LayoutDashboard,
       title: 'Real-Time Dashboard',
-      description: 'Monitor registrations, check-ins, and analytics live from one powerful interface.',
+      description:
+        'Monitor registrations, check-ins, and analytics live from one powerful interface.',
       benefits: [
         'Live attendance tracking',
         'Registration analytics',
@@ -119,39 +132,47 @@ const ServicesPage = () => {
     {
       number: '01',
       title: 'Setup & Configuration',
-      description: 'We work with you to configure the platform according to your event requirements and branding.',
+      description:
+        'We work with you to configure the platform according to your event requirements and branding.',
     },
     {
       number: '02',
       title: 'Registration Launch',
-      description: 'Launch your registration portal with custom forms, payment integration, and automated confirmations.',
+      description:
+        'Launch your registration portal with custom forms, payment integration, and automated confirmations.',
     },
     {
       number: '03',
       title: 'Pre-Event Preparation',
-      description: 'Generate QR passes, configure check-in stations, and brief your team on the system.',
+      description:
+        'Generate QR passes, configure check-in stations, and brief your team on the system.',
     },
     {
       number: '04',
       title: 'Event Day Execution',
-      description: 'Our team provides on-site support while you monitor everything from the real-time dashboard.',
+      description:
+        'Our team provides on-site support while you monitor everything from the real-time dashboard.',
     },
     {
       number: '05',
       title: 'Post-Event Analytics',
-      description: 'Receive comprehensive reports and insights to measure success and improve future events.',
+      description:
+        'Receive comprehensive reports and insights to measure success and improve future events.',
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: '1s' }}
+          />
         </div>
 
         <div className="container mx-auto max-w-7xl relative z-10">
@@ -233,7 +254,9 @@ const ServicesPage = () => {
                 Powerful Dashboard, <span className="text-primary">Simple Interface</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Monitor every aspect of your event from a single, intuitive dashboard. Get real-time insights, track attendance, manage exhibitors, and generate reports—all at your fingertips.
+                Monitor every aspect of your event from a single, intuitive dashboard. Get real-time
+                insights, track attendance, manage exhibitors, and generate reports—all at your
+                fingertips.
               </p>
               <ul className="space-y-4">
                 {[
@@ -298,7 +321,9 @@ const ServicesPage = () => {
               >
                 <feature.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -337,7 +362,9 @@ const ServicesPage = () => {
                   <span className="text-xl font-bold text-white">{step.number}</span>
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="text-2xl font-bold text-secondary-foreground mb-2">{step.title}</h3>
+                  <h3 className="text-2xl font-bold text-secondary-foreground mb-2">
+                    {step.title}
+                  </h3>
                   <p className="text-secondary-foreground/80 leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
