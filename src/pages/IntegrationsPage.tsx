@@ -45,7 +45,7 @@ const IntegrationsPage = () => {
         {
           name: 'SendGrid',
           description: 'Reliable email delivery for event communications',
-          features: ['Bulk Emails', 'Templates', 'Analytics', 'API'],
+          features: ['Bulk Emails', 'Templates', 'Analytics', 'Automation'],
           logo: '📧',
         },
         {
@@ -126,9 +126,9 @@ const IntegrationsPage = () => {
       description: 'Enterprise-grade security for all third-party connections',
     },
     {
-      icon: Code,
-      title: 'API Access',
-      description: 'Build custom integrations with our comprehensive API',
+      icon: LinkIcon,
+      title: 'Seamless Integration',
+      description: 'All integrations work perfectly together without any hassle',
     },
     {
       icon: Clock,
@@ -247,7 +247,7 @@ const IntegrationsPage = () => {
         </section>
       ))}
 
-      {/* API Section */}
+      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div
@@ -262,14 +262,14 @@ const IntegrationsPage = () => {
                 <LinkIcon className="w-16 h-16 text-primary mx-auto mb-6" />
                 <h2 className="text-3xl font-bold mb-4">Need a Custom Integration?</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Our powerful API allows you to build custom integrations tailored to your specific needs. Complete documentation and developer support available.
+                  We can help you connect Esenyx with your existing tools and systems. Our team will work with you to create the perfect integration solution for your needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" onClick={() => navigate('/contact')}>
                     Contact Sales
                   </Button>
-                  <Button size="lg" variant="outline" onClick={() => window.open('https://docs.lovable.dev', '_blank')}>
-                    View API Docs
+                  <Button size="lg" variant="outline" onClick={() => navigate('/book-demo')}>
+                    Book a Demo
                   </Button>
                 </div>
               </CardContent>
