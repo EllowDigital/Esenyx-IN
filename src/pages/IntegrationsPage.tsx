@@ -1,5 +1,18 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle2, Zap, Shield, Code, CreditCard, Mail, BarChart3, MessageSquare, Globe, Clock, Link as LinkIcon } from 'lucide-react'
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  Shield,
+  Code,
+  CreditCard,
+  Mail,
+  BarChart3,
+  MessageSquare,
+  Globe,
+  Clock,
+  Link as LinkIcon,
+} from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -19,7 +32,7 @@ const IntegrationsPage = () => {
       integrations: [
         {
           name: 'Razorpay',
-          description: 'Accept payments seamlessly with India\'s leading payment gateway',
+          description: "Accept payments seamlessly with India's leading payment gateway",
           features: ['UPI', 'Cards', 'Wallets', 'Net Banking'],
           logo: '💳',
         },
@@ -140,7 +153,7 @@ const IntegrationsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto text-center">
@@ -157,7 +170,8 @@ const IntegrationsPage = () => {
               Connect Esenyx with Your <span className="text-primary">Favorite Tools</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Seamlessly integrate with payment gateways, email services, analytics platforms, and more to create the perfect event management ecosystem.
+              Seamlessly integrate with payment gateways, email services, analytics platforms, and
+              more to create the perfect event management ecosystem.
             </p>
             <Button onClick={() => navigate('/contact')} size="lg" className="gap-2">
               Request Integration <ArrowRight className="w-5 h-5" />
@@ -177,7 +191,10 @@ const IntegrationsPage = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-border/50 hover:border-primary/50 transition-all duration-300">
+              <Card
+                key={index}
+                className="border-border/50 hover:border-primary/50 transition-all duration-300"
+              >
                 <CardContent className="pt-6 text-center">
                   <benefit.icon className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="font-semibold mb-2">{benefit.title}</h3>
@@ -230,7 +247,10 @@ const IntegrationsPage = () => {
                           <p className="text-sm font-semibold text-foreground">Features:</p>
                           <ul className="space-y-1">
                             {integration.features.map((feature, featureIndex) => (
-                              <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <li
+                                key={featureIndex}
+                                className="flex items-center gap-2 text-sm text-muted-foreground"
+                              >
                                 <CheckCircle2 className="w-4 h-4 text-primary" />
                                 {feature}
                               </li>
@@ -262,7 +282,8 @@ const IntegrationsPage = () => {
                 <LinkIcon className="w-16 h-16 text-primary mx-auto mb-6" />
                 <h2 className="text-3xl font-bold mb-4">Need a Custom Integration?</h2>
                 <p className="text-lg text-muted-foreground mb-8">
-                  We can help you connect Esenyx with your existing tools and systems. Our team will work with you to create the perfect integration solution for your needs.
+                  We can help you connect Esenyx with your existing tools and systems. Our team will
+                  work with you to create the perfect integration solution for your needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" onClick={() => navigate('/contact')}>

@@ -1,6 +1,17 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Calendar, Users, Building, Mail, Phone, User, ArrowLeft, Clock, CheckCircle2, Star } from 'lucide-react'
+import {
+  Calendar,
+  Users,
+  Building,
+  Mail,
+  Phone,
+  User,
+  ArrowLeft,
+  Clock,
+  CheckCircle2,
+  Star,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -120,7 +131,10 @@ const BookDemoPage = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Full Name */}
                         <div className="space-y-2">
-                          <label htmlFor="name" className="flex items-center gap-2 text-sm font-medium">
+                          <label
+                            htmlFor="name"
+                            className="flex items-center gap-2 text-sm font-medium"
+                          >
                             <User className="w-4 h-4 text-primary" />
                             Full Name *
                           </label>
@@ -137,7 +151,10 @@ const BookDemoPage = () => {
 
                         {/* Email */}
                         <div className="space-y-2">
-                          <label htmlFor="email" className="flex items-center gap-2 text-sm font-medium">
+                          <label
+                            htmlFor="email"
+                            className="flex items-center gap-2 text-sm font-medium"
+                          >
                             <Mail className="w-4 h-4 text-primary" />
                             Email Address *
                           </label>
@@ -154,7 +171,10 @@ const BookDemoPage = () => {
 
                         {/* Phone */}
                         <div className="space-y-2">
-                          <label htmlFor="phone" className="flex items-center gap-2 text-sm font-medium">
+                          <label
+                            htmlFor="phone"
+                            className="flex items-center gap-2 text-sm font-medium"
+                          >
                             <Phone className="w-4 h-4 text-primary" />
                             Phone Number *
                           </label>
@@ -289,7 +309,10 @@ const BookDemoPage = () => {
 
                       {/* Message */}
                       <div className="space-y-2">
-                        <label htmlFor="message" className="flex items-center gap-2 text-sm font-medium">
+                        <label
+                          htmlFor="message"
+                          className="flex items-center gap-2 text-sm font-medium"
+                        >
                           What would you like to see in the demo?
                         </label>
                         <textarea
@@ -346,7 +369,10 @@ const BookDemoPage = () => {
                 {/* Benefits */}
                 <div className="space-y-4">
                   {benefits.map((benefit, index) => (
-                    <Card key={index} className="border-border/50 hover:border-primary/50 transition-all duration-300">
+                    <Card
+                      key={index}
+                      className="border-border/50 hover:border-primary/50 transition-all duration-300"
+                    >
                       <CardContent className="p-6 flex gap-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           <benefit.icon className="w-6 h-6 text-primary" />
@@ -365,7 +391,10 @@ const BookDemoPage = () => {
                   <CardContent className="p-6 space-y-4">
                     <h3 className="text-lg font-bold">What Clients Say</h3>
                     {testimonials.map((testimonial, index) => (
-                      <div key={index} className="space-y-2 pb-4 border-b border-border/50 last:border-0 last:pb-0">
+                      <div
+                        key={index}
+                        className="space-y-2 pb-4 border-b border-border/50 last:border-0 last:pb-0"
+                      >
                         <div className="flex gap-1 mb-2">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star key={i} className="w-4 h-4 fill-primary text-primary" />

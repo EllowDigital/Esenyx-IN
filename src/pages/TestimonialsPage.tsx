@@ -19,7 +19,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Priya',
       rating: 5,
       quote: 'Esenyx transformed how we manage our tech conferences.',
-      review: 'We organized TechCon India 2024 with over 5,000 attendees, and Esenyx made the entire process seamless. The QR code system eliminated long queues, and the real-time dashboard helped us make quick decisions. The support team was incredibly responsive, even during peak hours.',
+      review:
+        'We organized TechCon India 2024 with over 5,000 attendees, and Esenyx made the entire process seamless. The QR code system eliminated long queues, and the real-time dashboard helped us make quick decisions. The support team was incredibly responsive, even during peak hours.',
       results: [
         { label: 'Check-in Time Reduced', value: '75%' },
         { label: 'Attendee Satisfaction', value: '98%' },
@@ -35,7 +36,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Rajesh',
       rating: 5,
       quote: 'The analytics dashboard gave us insights we never had before.',
-      review: 'Running a multi-day business summit requires precision and data-driven decisions. Esenyx\'s analytics helped us track attendance patterns, identify popular sessions, and optimize our schedule in real-time. The platform paid for itself with the efficiency gains alone.',
+      review:
+        "Running a multi-day business summit requires precision and data-driven decisions. Esenyx's analytics helped us track attendance patterns, identify popular sessions, and optimize our schedule in real-time. The platform paid for itself with the efficiency gains alone.",
       results: [
         { label: 'Revenue Increase', value: '35%' },
         { label: 'Operational Cost Savings', value: '₹2.5L' },
@@ -51,7 +53,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Anita',
       rating: 5,
       quote: 'Perfect for luxury weddings! Our guests loved the digital experience.',
-      review: 'We specialize in high-end weddings, and Esenyx added a touch of sophistication our clients loved. Digital invitations were elegant, RSVP tracking was effortless, and the entry system ensured only invited guests entered. The customization options matched our luxury brand perfectly.',
+      review:
+        'We specialize in high-end weddings, and Esenyx added a touch of sophistication our clients loved. Digital invitations were elegant, RSVP tracking was effortless, and the entry system ensured only invited guests entered. The customization options matched our luxury brand perfectly.',
       results: [
         { label: 'Guest Check-in Speed', value: '90% faster' },
         { label: 'Client Satisfaction', value: '5/5' },
@@ -67,7 +70,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Vikram',
       rating: 5,
       quote: 'Managed 10,000+ people across 9 nights flawlessly.',
-      review: 'Organizing a 9-night Navratri festival with varying attendance each night was challenging. Esenyx\'s ticketing and entry system handled peak crowds efficiently. The real-time capacity monitoring kept us compliant with safety regulations, and the analytics helped us plan better for next year.',
+      review:
+        "Organizing a 9-night Navratri festival with varying attendance each night was challenging. Esenyx's ticketing and entry system handled peak crowds efficiently. The real-time capacity monitoring kept us compliant with safety regulations, and the analytics helped us plan better for next year.",
       results: [
         { label: 'Peak Hour Entries/Min', value: '200+' },
         { label: 'System Uptime', value: '99.9%' },
@@ -83,7 +87,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Meera',
       rating: 5,
       quote: 'Enterprise-grade solution that scales with our needs.',
-      review: 'We use Esenyx for all our corporate events, from small team gatherings to large conferences. The platform integrates seamlessly with our existing systems, and the white-label options maintain our brand consistency. The reporting features are invaluable for stakeholder presentations.',
+      review:
+        'We use Esenyx for all our corporate events, from small team gatherings to large conferences. The platform integrates seamlessly with our existing systems, and the white-label options maintain our brand consistency. The reporting features are invaluable for stakeholder presentations.',
       results: [
         { label: 'Events Managed', value: '50+/year' },
         { label: 'Cost per Event', value: '-60%' },
@@ -99,7 +104,8 @@ const TestimonialsPage = () => {
       image: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun',
       rating: 5,
       quote: 'Simplified our campus events and student engagement.',
-      review: 'From seminars to cultural fests, Esenyx handles all our university events. Students love the mobile-friendly interface, and we appreciate the detailed attendance reports. The platform has improved our event participation by 40% and made compliance reporting much easier.',
+      review:
+        'From seminars to cultural fests, Esenyx handles all our university events. Students love the mobile-friendly interface, and we appreciate the detailed attendance reports. The platform has improved our event participation by 40% and made compliance reporting much easier.',
       results: [
         { label: 'Participation Increase', value: '40%' },
         { label: 'Paper Waste Reduced', value: '100%' },
@@ -141,7 +147,7 @@ const TestimonialsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto text-center">
@@ -223,8 +229,10 @@ const TestimonialsPage = () => {
                           />
                           <h3 className="text-xl font-bold mb-1">{testimonial.name}</h3>
                           <p className="text-sm text-muted-foreground mb-1">{testimonial.role}</p>
-                          <p className="text-sm font-semibold text-primary mb-4">{testimonial.company}</p>
-                          
+                          <p className="text-sm font-semibold text-primary mb-4">
+                            {testimonial.company}
+                          </p>
+
                           <div className="flex gap-1 mb-4">
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <Star key={i} className="w-5 h-5 fill-primary text-primary" />
@@ -340,9 +348,12 @@ const TestimonialsPage = () => {
           >
             <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
               <CardContent className="p-12 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Join Our Success Stories?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Ready to Join Our Success Stories?
+                </h2>
                 <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  Start your journey with Esenyx today and experience the difference that professional event management software can make.
+                  Start your journey with Esenyx today and experience the difference that
+                  professional event management software can make.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" onClick={() => navigate('/book-demo')} className="gap-2">
