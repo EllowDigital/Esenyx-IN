@@ -22,8 +22,9 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Our Work', href: '/our-work' },
+    { name: 'Integrations', href: '/integrations' },
+    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'FAQ', href: '/#faq' },
     { name: 'Contact', href: '/contact' },
   ]
 

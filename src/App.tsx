@@ -12,6 +12,8 @@ const Index = lazy(() => import('./pages/Index'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ServicesPage = lazy(() => import('./pages/ServicesPage'))
 const OurWorkPage = lazy(() => import('./pages/OurWorkPage'))
+const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage'))
+const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
 const BookDemoPage = lazy(() => import('./pages/BookDemoPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
@@ -50,6 +52,8 @@ const App = () => (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/our-work" element={<OurWorkPage />} />
+            <Route path="/integrations" element={<IntegrationsPage />} />
+            <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/book-demo" element={<BookDemoPage />} />
             <Route path="/contact" element={<ContactPage />} />
