@@ -1,7 +1,7 @@
 {
   "name": "esenyx-by-ellowdigital",
   "private": true,
-  "version": "1.6.0",
+  "version": "1.8.0",
   "description": "Esenyx — Smart event registration & entry management by EllowDigital",
   "author": "EllowDigital <ellowdigitalindia@gmail.com>",
   "type": "module",

@@ -6,7 +6,13 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Users, Heart, Zap, Award, MapPin, Clock, Briefcase, Upload } from 'lucide-react'
@@ -20,23 +26,23 @@ const CareersPage = () => {
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'We believe in the power of teamwork and diverse perspectives'
+      description: 'We believe in the power of teamwork and diverse perspectives',
     },
     {
       icon: Heart,
       title: 'Passion',
-      description: 'We love what we do and bring enthusiasm to every project'
+      description: 'We love what we do and bring enthusiasm to every project',
     },
     {
       icon: Zap,
       title: 'Innovation',
-      description: 'We constantly push boundaries and embrace new ideas'
+      description: 'We constantly push boundaries and embrace new ideas',
     },
     {
       icon: Award,
       title: 'Excellence',
-      description: 'We strive for the highest quality in everything we deliver'
-    }
+      description: 'We strive for the highest quality in everything we deliver',
+    },
   ]
 
   const benefits = [
@@ -47,7 +53,7 @@ const CareersPage = () => {
     'Professional development budget',
     'Latest tech equipment and tools',
     'Team events and retreats',
-    'Wellness programs and gym membership'
+    'Wellness programs and gym membership',
   ]
 
   const openPositions = [
@@ -56,43 +62,43 @@ const CareersPage = () => {
       department: 'Engineering',
       location: 'Remote / New York',
       type: 'Full-time',
-      description: 'Build and scale our event management platform with modern technologies.'
+      description: 'Build and scale our event management platform with modern technologies.',
     },
     {
       title: 'Product Designer',
       department: 'Design',
       location: 'Remote / San Francisco',
       type: 'Full-time',
-      description: 'Create beautiful and intuitive experiences for event organizers worldwide.'
+      description: 'Create beautiful and intuitive experiences for event organizers worldwide.',
     },
     {
       title: 'Customer Success Manager',
       department: 'Customer Success',
       location: 'Remote',
       type: 'Full-time',
-      description: 'Help our customers succeed and build lasting relationships.'
+      description: 'Help our customers succeed and build lasting relationships.',
     },
     {
       title: 'Marketing Manager',
       department: 'Marketing',
       location: 'Remote / London',
       type: 'Full-time',
-      description: 'Drive growth and brand awareness through strategic marketing initiatives.'
-    }
+      description: 'Drive growth and brand awareness through strategic marketing initiatives.',
+    },
   ]
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     toast({
       title: 'Application Submitted!',
-      description: 'We\'ll review your application and get back to you soon.',
+      description: "We'll review your application and get back to you soon.",
     })
   }
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -106,7 +112,8 @@ const CareersPage = () => {
               Join Our <span className="text-primary">Mission</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Help us revolutionize event management and create memorable experiences for people worldwide
+              Help us revolutionize event management and create memorable experiences for people
+              worldwide
             </p>
           </motion.div>
         </div>
@@ -123,7 +130,8 @@ const CareersPage = () => {
           >
             <h2 className="text-4xl font-bold mb-4">Our Culture</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We're building a workplace where innovation thrives and everyone can do their best work
+              We're building a workplace where innovation thrives and everyone can do their best
+              work
             </p>
           </motion.div>
 
@@ -227,9 +235,7 @@ const CareersPage = () => {
                           </Badge>
                         </div>
                       </div>
-                      <Button onClick={() => setSelectedPosition(position.title)}>
-                        Apply Now
-                      </Button>
+                      <Button onClick={() => setSelectedPosition(position.title)}>Apply Now</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -250,9 +256,7 @@ const CareersPage = () => {
           >
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Apply Now</h2>
-              <p className="text-muted-foreground text-lg">
-                Start your journey with Esenyx
-              </p>
+              <p className="text-muted-foreground text-lg">Start your journey with Esenyx</p>
             </div>
 
             <Card>
@@ -297,7 +301,11 @@ const CareersPage = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="linkedin">LinkedIn Profile URL</Label>
-                    <Input id="linkedin" type="url" placeholder="https://linkedin.com/in/yourprofile" />
+                    <Input
+                      id="linkedin"
+                      type="url"
+                      placeholder="https://linkedin.com/in/yourprofile"
+                    />
                   </div>
 
                   <div className="space-y-2">
@@ -307,9 +315,9 @@ const CareersPage = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="coverLetter">Cover Letter *</Label>
-                    <Textarea 
-                      id="coverLetter" 
-                      required 
+                    <Textarea
+                      id="coverLetter"
+                      required
                       rows={6}
                       placeholder="Tell us why you'd be a great fit for this role..."
                     />
@@ -323,10 +331,10 @@ const CareersPage = () => {
                         <p className="text-sm font-medium">Upload your resume</p>
                         <p className="text-xs text-muted-foreground">PDF, DOC, DOCX (Max 5MB)</p>
                       </div>
-                      <input 
-                        id="resume" 
-                        type="file" 
-                        accept=".pdf,.doc,.docx" 
+                      <input
+                        id="resume"
+                        type="file"
+                        accept=".pdf,.doc,.docx"
                         className="hidden"
                         required
                       />
