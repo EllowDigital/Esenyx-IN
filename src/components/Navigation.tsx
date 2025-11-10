@@ -25,11 +25,25 @@ const Navigation = () => {
     { name: 'Integrations', href: '/integrations' },
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ]
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false)
+
+    // Special handling for Home link
+    if (href === '/') {
+      if (window.location.pathname === '/') {
+        // Already on homepage, scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      } else {
+        // Navigate to homepage
+        navigate('/')
+      }
+      return
+    }
 
     if (href.startsWith('/#')) {
       const id = href.substring(2)

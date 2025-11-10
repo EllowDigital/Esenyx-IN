@@ -15,6 +15,8 @@ const OurWorkPage = lazy(() => import('./pages/OurWorkPage'))
 const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage'))
 const TestimonialsPage = lazy(() => import('./pages/TestimonialsPage'))
 const PricingPage = lazy(() => import('./pages/PricingPage'))
+const FAQPage = lazy(() => import('./pages/FAQPage'))
+const CareersPage = lazy(() => import('./pages/CareersPage'))
 const BookDemoPage = lazy(() => import('./pages/BookDemoPage'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const NotFound = lazy(() => import('./pages/NotFound'))
@@ -55,6 +57,8 @@ const App = () => (
             <Route path="/integrations" element={<IntegrationsPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/careers" element={<CareersPage />} />
             <Route path="/book-demo" element={<BookDemoPage />} />
             <Route path="/contact" element={<ContactPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
