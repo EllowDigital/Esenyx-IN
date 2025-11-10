@@ -7,6 +7,12 @@
   port = 5173
 
 [[redirects]]
+  # Ensure sitemap and robots are served directly (avoid SPA catch-all shadowing them)
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
