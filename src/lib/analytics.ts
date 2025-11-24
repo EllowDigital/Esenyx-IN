@@ -2,6 +2,8 @@
 export const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX' // Replace with your actual GA4 Measurement ID
 
 // Initialize Google Analytics
+type GtagFunction = (...args: unknown[]) => void
+
 export const initGA = () => {
   if (typeof window === 'undefined') return
 
@@ -12,8 +14,8 @@ export const initGA = () => {
   document.head.appendChild(script)
 
   // Initialize gtag
-  window.dataLayer = window.dataLayer || []
-  function gtag(...args: any[]) {
+  window.dataLayer = window.dataLayer ?? []
+  const gtag: GtagFunction = (...args) => {
     window.dataLayer.push(args)
   }
   gtag('js', new Date())
@@ -22,21 +24,21 @@ export const initGA = () => {
   })
 
   // Make gtag available globally
-  ;(window as any).gtag = gtag
+  window.gtag = gtag
 }
 
 // Track page views
 export const trackPageView = (url: string) => {
-  if (typeof window === 'undefined' || !(window as any).gtag) return
-  ;(window as any).gtag('config', GA_MEASUREMENT_ID, {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+  window.gtag('config', GA_MEASUREMENT_ID, {
     page_path: url,
   })
 }
 
 // Track custom events
 export const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-  if (typeof window === 'undefined' || !(window as any).gtag) return
-  ;(window as any).gtag('event', action, {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') return
+  window.gtag('event', action, {
     event_category: category,
     event_label: label,
     value: value,
@@ -61,7 +63,7 @@ export const trackNavigation = (destination: string) => {
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    dataLayer: any[]
-    gtag?: (...args: any[]) => void
+    dataLayer?: unknown[][]
+    gtag?: GtagFunction
   }
 }
