@@ -43,6 +43,8 @@ const Preloader = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-background"
+          role="presentation"
+          aria-hidden="true"
         >
           <div className="flex flex-col items-center gap-6">
             {/* Logo Animation */}

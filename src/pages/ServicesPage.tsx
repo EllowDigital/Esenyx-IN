@@ -203,7 +203,7 @@ const ServicesPage = () => {
             className="text-center space-y-4 mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold">
-              Core <span className="text-primary">Features</span>
+              Core <span className="text-primary-foreground">Features</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Everything you need for successful event management
@@ -218,7 +218,8 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-8 bg-card rounded-xl shadow-lg hover:shadow-2xl transition-all border border-border hover:border-primary/50 group"
+                tabIndex={0}
+                className="p-8 bg-card rounded-xl shadow-lg hover:shadow-2xl transition-all border border-border hover:border-primary/50 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-8 h-8 text-primary" />
@@ -251,7 +252,7 @@ const ServicesPage = () => {
               className="space-y-6"
             >
               <h2 className="text-4xl md:text-5xl font-bold">
-                Powerful Dashboard, <span className="text-primary">Simple Interface</span>
+                Powerful Dashboard, <span className="text-primary-foreground">Simple Interface</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Monitor every aspect of your event from a single, intuitive dashboard. Get real-time
@@ -305,7 +306,7 @@ const ServicesPage = () => {
             className="text-center space-y-4 mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold">
-              Additional <span className="text-primary">Capabilities</span>
+              Additional <span className="text-primary-foreground">Capabilities</span>
             </h2>
           </motion.div>
 
@@ -317,7 +318,8 @@ const ServicesPage = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all hover:shadow-lg group"
+                tabIndex={0}
+                className="p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-all hover:shadow-lg group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
               >
                 <feature.icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
