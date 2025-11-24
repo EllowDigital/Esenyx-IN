@@ -9,7 +9,7 @@ const Dashboard = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Real-Time <span className="text-primary">Admin Dashboard</span>
+              Real-Time <span className="text-primary-foreground">Admin Dashboard</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Monitor every aspect of your event with powerful, real-time analytics

@@ -52,7 +52,7 @@ const Features = () => {
           {/* Section Header */}
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Powerful <span className="text-primary">Features</span>
+              Powerful <span className="text-primary-foreground">Features</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Everything you need to run flawless events from start to finish
