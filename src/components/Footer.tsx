@@ -53,7 +53,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/#about"
+                  href="/about"
                   className="text-secondary-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block"
                 >
                   About
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/#contact"
+                  href="/contact"
                   className="text-secondary-foreground/70 hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block"
                 >
                   Contact
